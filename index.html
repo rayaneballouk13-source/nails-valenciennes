@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onglerie Premium | Valenciennes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap');
+
+        :root {
+            --primary: #D4A373; /* Or doux / Nude */
+            --bg-color: #FAFAFA;
+            --text-dark: #2D2D2D;
+            --text-light: #7A7A7A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .brand {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navbar */
+        header {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .brand {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .btn-reserve {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-reserve:hover {
+            background-color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            padding-right: 2rem;
+            margin-top: 5rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .hero h1 i {
+            color: var(--primary);
+        }
+
+        .hero p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 450px;
+        }
+
+        .hero-img-container {
+            flex: 1;
+            height: 80vh;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .hero-img {
+            width: 85%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px 20px 0 20px;
+            box-shadow: -20px 20px 0 var(--primary);
+        }
+
+        /* Services Preview */
+        .services {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-header h2 {
+            font-size: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-color);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 6rem 5%;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .btn-white:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                height: auto;
+                padding-top: 150px;
+            }
+            .hero-content {
+                padding-right: 0;
+                margin-top: 0;
+                margin-bottom: 3rem;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .hero p {
+                margin: 0 auto 2rem;
+            }
+            .hero-img-container {
+                width: 100%;
+                height: 400px;
+                justify-content: center;
+            }
+            .hero-img {
+                width: 100%;
+                box-shadow: 10px 10px 0 var(--primary);
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="brand">L'Atelier.</a>
+        <a href="#reserve" class="btn-reserve">Prendre RDV</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>L'art de la <i>Manucure</i> à Valenciennes.</h1>
+            <p>Un espace dédié à la beauté de vos mains. Des prestations sur-mesure, des produits haut de gamme et un savoir-faire unique.</p>
+            <a href="#reserve" class="btn-reserve" style="padding: 15px 35px; font-size: 1.1rem;">Réserver mon instant</a>
+        </div>
+        <div class="hero-img-container">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop" alt="Manucure esthétique" class="hero-img">
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="services-header">
+            <h2>Notre Savoir-Faire</h2>
+            <p style="color: var(--text-light); margin-top: 10px;">Des prestations adaptées à vos envies.</p>
+        </div>
+        <div class="grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop" alt="Pose Gel">
+                <h3>Pose Gel & Porcelaine</h3>
+                <p>Rallongement et renforcement sur-mesure pour des ongles parfaits et durables.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=800&auto=format&fit=crop" alt="Semi Permanent">
+                <h3>Vernis Semi-Permanent</h3>
+                <p>Une couleur éclatante et une brillance absolue qui durent jusqu'à 3 semaines.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1629814545330-84382103f6f0?q=80&w=800&auto=format&fit=crop" alt="Nail Art">
+                <h3>Nail Art Signature</h3>
+                <p>Laissez libre cours à votre imagination avec nos créations artistiques uniques.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="reserve">
+        <h2>Sublimez vos mains dès aujourd'hui.</h2>
+        <p>Prenez rendez-vous en ligne en quelques clics (Intégration Planity/Treatwell).</p>
+        <a href="#" class="btn-white">Voir les disponibilités</a>
+    </section>
+
+</body>
+</html>
